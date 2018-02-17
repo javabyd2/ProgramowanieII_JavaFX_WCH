@@ -22,16 +22,16 @@ public class Main extends Application {
     private ObservableList<Person> personObsevableList = FXCollections.observableArrayList();
 
     public Main() {
-        personObsevableList.add(new Person("Jan", "Kowalski","86-050","Bydgoszcz","02-12-1990","Karska"));
-        personObsevableList.add(new Person("Andrzej", "Petyja","90-784","Warszawa","1967","Spokojna"));
-        personObsevableList.add(new Person("Tomasz", "Nikczem","89-453","Lublin","1945","Nowa"));
-        personObsevableList.add(new Person("Krystian", "Bokuski","34-675","Gdańska","1996","Hojny"));
-        personObsevableList.add(new Person("Paulina", "Nowak","67-456","Poznań","1967","Szybka"));
-        personObsevableList.add(new Person("Dorota", "Ciela","45-123","Kraków","1997","Liściasta"));
-        personObsevableList.add(new Person("Paweł", "Sydria","98-456","Lublin","1980","Haska"));
-        personObsevableList.add(new Person("Kamil", "Linda","90-456","Wrocław","1967","Niebieska"));
-        personObsevableList.add(new Person("Bożena", "Anokiewski","34-890","Katowice","1956","Wąska"));
-        personObsevableList.add(new Person("Grzegorz", "Kipal","45-678","Sopot","1990","Błękitna"));
+        personObsevableList.add(new Person("Jan", "Kowalski","86-050","Bydgoszcz","02-12-1990","Karska 6"));
+        personObsevableList.add(new Person("Andrzej", "Pomat","90-784","Warszawa","06-12-1967","Spokojna 12"));
+        personObsevableList.add(new Person("Tomasz", "Nikiel","89-453","Lublin","09-12-1945","Nowa 77"));
+        personObsevableList.add(new Person("Krystian", "Bokuski","34-675","Gdańska","12-05-1996","Monsuna 5"));
+        personObsevableList.add(new Person("Paulina", "Nowak","67-456","Poznań","22-06-1967","Szybka 1"));
+        personObsevableList.add(new Person("Dorota", "Krosna","45-123","Kraków","12-02-1997","Liściasta 9"));
+        personObsevableList.add(new Person("Paweł", "Sydria","98-456","Lublin","09-03-1980","Haska 12"));
+        personObsevableList.add(new Person("Kamil", "Linda","90-456","Wrocław","27-09-1967","Niebieska 4"));
+        personObsevableList.add(new Person("Bożena", "Anokiewski","34-890","Katowice","11-11-1956","Wąska 78"));
+        personObsevableList.add(new Person("Grzegorz", "Kipal","45-678","Sopot","09-10-1990","Błękitna 12"));
     }
 
     public ObservableList<Person> getPerson() {
