@@ -26,8 +26,8 @@
                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
-                                <TableColumn fx:id="firstname" prefWidth="119.0" text="Imie"/>
-                                <TableColumn fx:id="lastname" minWidth="0.0" prefWidth="155.0" text="Nazwisko"/>
+                                <TableColumn fx:id="firstnameColumn" prefWidth="119.0" text="Imie"/>
+                                <TableColumn fx:id="lastnameColumn" minWidth="0.0" prefWidth="155.0" text="Nazwisko"/>
                             </columns>
                         </TableView>
                     </children>

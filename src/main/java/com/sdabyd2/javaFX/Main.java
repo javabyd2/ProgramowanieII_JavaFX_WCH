@@ -22,17 +22,16 @@ public class Main extends Application {
     private ObservableList<Person> personObsevableList = FXCollections.observableArrayList();
 
     public Main() {
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
-        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski","86-050","Bydgoszcz","02-12-1990","Karska"));
+        personObsevableList.add(new Person("Andrzej", "Petyja","90-784","Warszawa","1967","Spokojna"));
+        personObsevableList.add(new Person("Tomasz", "Nikczem","89-453","Lublin","1945","Nowa"));
+        personObsevableList.add(new Person("Krystian", "Bokuski","34-675","Gdańska","1996","Hojny"));
+        personObsevableList.add(new Person("Paulina", "Nowak","67-456","Poznań","1967","Szybka"));
+        personObsevableList.add(new Person("Dorota", "Ciela","45-123","Kraków","1997","Liściasta"));
+        personObsevableList.add(new Person("Paweł", "Sydria","98-456","Lublin","1980","Haska"));
+        personObsevableList.add(new Person("Kamil", "Linda","90-456","Wrocław","1967","Niebieska"));
+        personObsevableList.add(new Person("Bożena", "Anokiewski","34-890","Katowice","1956","Wąska"));
+        personObsevableList.add(new Person("Grzegorz", "Kipal","45-678","Sopot","1990","Błękitna"));
     }
 
     public ObservableList<Person> getPerson() {

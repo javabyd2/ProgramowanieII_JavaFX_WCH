@@ -15,10 +15,10 @@ public class Controller {
     private TableView<Person> personTableView;
 
     @FXML
-    private TableColumn<Person, String> firstname;
+    private TableColumn<Person, String> firstnameColumn;
 
     @FXML
-    private TableColumn<Person, String> lastname;
+    private TableColumn<Person, String> lastnameColumn;
 
     @FXML
     private Label firstNameLabel;
@@ -41,7 +41,7 @@ public class Controller {
     // referencja klasy main
     private Main main;
 
-    public void setMain(Main main){
+    public void setMain(Main main) {
         this.main = main;
         personTableView.setItems(main.getPerson());
     }
@@ -51,5 +51,26 @@ public class Controller {
     }
 
     public Controller() {
+    }
+
+    @FXML
+    private void initialize() {
+        firstnameColumn.setCellValueFactory(
+                data -> data.getValue().firstnameProperty());
+        lastnameColumn.setCellValueFactory(
+                data -> data.getValue().lastnameProperty());
+        personTableView.getSelectionModel().selectedItemProperty()
+                .addListener((observable, x, y) -> showPerson(y));
+    }
+
+    public void showPerson(Person person) {
+        System.out.println(">> Wybrałeś: "+person.getFirstname()+" "+person.getLastname());
+        firstNameLabel.setText(person.getFirstname());
+        lastnameLabel.setText(person.getLastname());
+        birthdayLabel.setText(person.getBirthday());
+        cityLabel.setText(person.getCity());
+        postalCodeLabel.setText(person.getPostalcode());
+        streetLabel.setText(person.getStreet());
+
     }
 }
