@@ -1,5 +1,6 @@
 package com.sdabyd2.javaFX;
 
+import com.sdabyd2.javaFX.controller.Controller;
 import com.sdabyd2.javaFX.model.Person;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -20,18 +21,22 @@ public class Main extends Application {
 
     private ObservableList<Person> personObsevableList = FXCollections.observableArrayList();
 
-    public Main(){
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
-        personObsevableList.add(new Person("Jan","Kowalski"));
+    public Main() {
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+        personObsevableList.add(new Person("Jan", "Kowalski"));
+    }
+
+    public ObservableList<Person> getPerson() {
+        return personObsevableList;
     }
 
     @Override
@@ -42,6 +47,8 @@ public class Main extends Application {
     }
 
     public void initRootLayout() throws IOException {
+
+
         rootLayout = FXMLLoader.load(getClass().getClassLoader()
                 .getResource("RootLayout.fxml"));
         Scene scene = new Scene(rootLayout);
@@ -50,9 +57,16 @@ public class Main extends Application {
     }
 
     public void showPersonLayout() throws IOException {
-        AnchorPane person = FXMLLoader.load(getClass().getClassLoader()
-                .getResource("PersonOverview.fxml"));
+
+        FXMLLoader loader = new FXMLLoader((getClass().getClassLoader()
+                .getResource("PersonOverview.fxml")));
+
+
+        AnchorPane person = loader.load();
         rootLayout.setCenter(person);
+
+        Controller controller = loader.getController();
+        controller.setMain(this);
     }
 
     public static void main(String[] args) {
