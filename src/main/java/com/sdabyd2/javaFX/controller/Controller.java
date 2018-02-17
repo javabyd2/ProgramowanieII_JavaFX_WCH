@@ -4,12 +4,17 @@ import com.sdabyd2.javaFX.Main;
 import com.sdabyd2.javaFX.model.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import javax.swing.text.TabableView;
+import java.io.IOException;
 
 public class Controller {
 
@@ -88,6 +93,18 @@ public class Controller {
             alert.setContentText("Nie można usunąć");
             alert.showAndWait();
         }
+
+    }
+
+    public void addPerson(ActionEvent actionEvent) throws IOException {
+
+        AnchorPane addPersonLayout = FXMLLoader.load(getClass().getClassLoader().getResource("AddPerson.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(addPersonLayout);
+        stage.setScene(scene);
+        stage.show();
+
 
     }
 }
