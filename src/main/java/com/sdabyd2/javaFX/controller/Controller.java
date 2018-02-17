@@ -2,7 +2,9 @@ package com.sdabyd2.javaFX.controller;
 
 import com.sdabyd2.javaFX.Main;
 import com.sdabyd2.javaFX.model.Person;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -64,13 +66,28 @@ public class Controller {
     }
 
     public void showPerson(Person person) {
-        System.out.println(">> Wybrałeś: "+person.getFirstname()+" "+person.getLastname());
+        System.out.println(">> Wybrałeś: " + person.getFirstname() + " " + person.getLastname());
         firstNameLabel.setText(person.getFirstname());
         lastnameLabel.setText(person.getLastname());
         birthdayLabel.setText(person.getBirthday());
         cityLabel.setText(person.getCity());
         postalCodeLabel.setText(person.getPostalcode());
         streetLabel.setText(person.getStreet());
+    }
+
+    @FXML
+    private void deletePerson() {
+        int index = personTableView.getSelectionModel().getSelectedIndex();
+        if (index >= 0) {
+            System.out.println(">> Usunołeś: " + main.getPerson().get(index).getFirstname() + " " + main.getPerson().get(index).getLastname());
+            personTableView.getItems().remove(index);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Błąd");
+            alert.setHeaderText("To jest error");
+            alert.setContentText("Nie można usunąć");
+            alert.showAndWait();
+        }
 
     }
 }

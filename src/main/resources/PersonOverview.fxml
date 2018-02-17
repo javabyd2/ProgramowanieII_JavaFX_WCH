@@ -11,63 +11,56 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane fx:controller="com.sdabyd2.javaFX.controller.Controller" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sdabyd2.javaFX.controller.Controller">
     <children>
-        <SplitPane dividerPositions="0.4765886287625418" layoutX="200.0" layoutY="114.0" prefHeight="400.0"
-                   prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <SplitPane dividerPositions="0.4765886287625418" layoutX="200.0" layoutY="114.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <TableView fx:id="personTableView" layoutY="14.0" prefHeight="398.0" prefWidth="221.0"
-                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="personTableView" layoutY="14.0" prefHeight="398.0" prefWidth="221.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
-                                <TableColumn fx:id="firstnameColumn" prefWidth="119.0" text="Imie"/>
-                                <TableColumn fx:id="lastnameColumn" minWidth="0.0" prefWidth="155.0" text="Nazwisko"/>
+                                <TableColumn fx:id="firstnameColumn" prefWidth="119.0" text="Imie" />
+                                <TableColumn fx:id="lastnameColumn" minWidth="0.0" prefWidth="155.0" text="Nazwisko" />
                             </columns>
                         </TableView>
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <Label layoutX="14.0" layoutY="14.0" text="Szczegóły osób"/>
+                        <Label layoutX="14.0" layoutY="14.0" text="Szczegóły osób" />
                         <GridPane layoutX="2.0" layoutY="55.0" prefHeight="195.0" prefWidth="301.0">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Label  text="Imie"/>
-                                <Label  text="Nazwisko" GridPane.rowIndex="1"/>
-                                <Label  text="Ulica" GridPane.rowIndex="2"/>
-                                <Label  text="Miasto" GridPane.rowIndex="3"/>
-                                <Label  text="Data urodzenia" GridPane.rowIndex="5"/>
-                                <Label  text="Adres" GridPane.rowIndex="4"/>
-                                <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1"/>
-                                <Label fx:id="lastnameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                                <Label fx:id="streetLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                                <Label fx:id="cityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                                <Label fx:id="postalCodeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-                                <Label fx:id="birthdayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                                <Label text="Imie" />
+                                <Label text="Nazwisko" GridPane.rowIndex="1" />
+                                <Label text="Ulica" GridPane.rowIndex="2" />
+                                <Label text="Miasto" GridPane.rowIndex="3" />
+                                <Label text="Data urodzenia" GridPane.rowIndex="5" />
+                                <Label text="Adres" GridPane.rowIndex="4" />
+                                <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" />
+                                <Label fx:id="lastnameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label fx:id="streetLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label fx:id="cityLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Label fx:id="postalCodeLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label fx:id="birthdayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                             </children>
                         </GridPane>
                         <ButtonBar layoutX="50.0" layoutY="339.0" prefHeight="40.0" prefWidth="200.0">
                             <buttons>
-                                <Button mnemonicParsing="false" text="Dodaj"/>
-                                <Button mnemonicParsing="false" text="Edytuj"/>
-                                <Button mnemonicParsing="false" text="Usuń"/>
+                                <Button mnemonicParsing="false" text="Dodaj" />
+                                <Button mnemonicParsing="false" text="Edytuj" />
+                                <Button mnemonicParsing="false" onAction="#deletePerson" text="Usuń" />
                             </buttons>
                         </ButtonBar>
                     </children>
