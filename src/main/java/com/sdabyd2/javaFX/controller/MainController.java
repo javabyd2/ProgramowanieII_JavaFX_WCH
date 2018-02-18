@@ -42,7 +42,8 @@ public class MainController {
     private Label birthdayLabel;
 
     @FXML
-    private Button closeButton;
+    private Button close;
+
 
 
 
@@ -100,7 +101,7 @@ public class MainController {
 
         FXMLLoader loader = new FXMLLoader(
                 (getClass().getClassLoader().getResource("AddPerson.fxml")
-        ));
+                ));
 
         AnchorPane addPersonLayout = loader.load();
         AddPersonController addPersonController = loader.getController();
@@ -110,9 +111,16 @@ public class MainController {
         Scene scene = new Scene(addPersonLayout);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
 
+
+
+    public void edit(ActionEvent actionEvent) throws IOException {
+    }
+
+    public void close() {
+        Stage stage = (Stage) close.getScene().getWindow();
+        stage.close();
+    }
 }
