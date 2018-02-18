@@ -113,9 +113,6 @@ public class MainController {
         stage.show();
     }
 
-
-
-
     public void edit(ActionEvent actionEvent) throws IOException {
     }
 
