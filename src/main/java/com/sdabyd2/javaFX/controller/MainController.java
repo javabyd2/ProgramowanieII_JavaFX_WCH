@@ -6,17 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import javax.swing.text.TabableView;
 import java.io.IOException;
 
-public class Controller {
+public class MainController {
 
     @FXML
     private TableView<Person> personTableView;
@@ -45,6 +41,11 @@ public class Controller {
     @FXML
     private Label birthdayLabel;
 
+    @FXML
+    private Button closeButton;
+
+
+
     // referencja klasy main
     private Main main;
 
@@ -53,11 +54,11 @@ public class Controller {
         personTableView.setItems(main.getPerson());
     }
 
-    public Controller(Main main) {
+    public MainController(Main main) {
         this.main = main;
     }
 
-    public Controller() {
+    public MainController() {
     }
 
     @FXML
@@ -93,12 +94,17 @@ public class Controller {
             alert.setContentText("Nie można usunąć");
             alert.showAndWait();
         }
-
     }
 
     public void addPerson(ActionEvent actionEvent) throws IOException {
 
-        AnchorPane addPersonLayout = FXMLLoader.load(getClass().getClassLoader().getResource("AddPerson.fxml"));
+        FXMLLoader loader = new FXMLLoader(
+                (getClass().getClassLoader().getResource("AddPerson.fxml")
+        ));
+
+        AnchorPane addPersonLayout = loader.load();
+        AddPersonController addPersonController = loader.getController();
+        addPersonController.setMain(main);
 
         Stage stage = new Stage();
         Scene scene = new Scene(addPersonLayout);
@@ -107,4 +113,6 @@ public class Controller {
 
 
     }
+
+
 }

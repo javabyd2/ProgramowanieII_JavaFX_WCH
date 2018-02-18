@@ -1,6 +1,6 @@
 package com.sdabyd2.javaFX;
 
-import com.sdabyd2.javaFX.controller.Controller;
+import com.sdabyd2.javaFX.controller.MainController;
 import com.sdabyd2.javaFX.model.Person;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -60,10 +60,9 @@ public class Main extends Application {
         AnchorPane person = loader.load();
         rootLayout.setCenter(person);
 
-        Controller controller = loader.getController();
+        MainController controller = loader.getController();
         controller.setMain(this);
     }
-
 
     public static void main(String[] args) {
         launch(args);
